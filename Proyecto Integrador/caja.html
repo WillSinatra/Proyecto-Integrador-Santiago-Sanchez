@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Caja Fuerte — Henry</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="caja-estilos.css">
+  
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand">HENRY</div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html" class="nav-item">Home</a></li>
+          <li><a href="generar.html" class="nav-item">Generar contraseña</a></li>
+          <li><a href="caja.html" class="nav-item nav-active">Caja Fuerte</a></li>
+          <li><a href="monitoreo.html" class="nav-item">Monitoreo de actividad</a></li>
+          <li><a href="gestion.html" class="nav-item">Gestión de usuarios</a></li>
+        </ul>
+      </nav>
+      <div class="header-spacer"></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1 class="hero-title">Asistente De Seguridad</h1>
+      <div class="pill-yellow">CAJA FUERTE</div>
+    </section>
+
+    <section class="generator-section">
+      <div class="card">
+        <h2 class="card-title">Caja Fuerte - Configuración</h2>
+
+        <div id="setup-area">
+          <div class="row-setup">
+            <label for="secretCode">Código Secreto</label>
+            <input id="secretCode" type="text" maxlength="4" placeholder="4 dígitos" inputmode="numeric" pattern="[0-9]*">
+            <label for="maxAttempts">Cantidad de intentos</label>
+            <input id="maxAttempts" type="number" min="1" max="5" value="3">
+            <button id="saveBtn" class="btn btn-primary small">GUARDAR</button>
+          </div>
+        </div>
+
+        <div id="unlock-area" class="unlock-area">
+          <label for="tryCode">Validar Código Secreto</label>
+          <input id="tryCode" type="text" maxlength="4" placeholder="Ingrese código" inputmode="numeric" pattern="[0-9]*">
+          <div class="actions">
+            <button id="validateBtn" class="btn btn-primary">VALIDAR CÓDIGO</button>
+            <button id="resetBtn" class="btn btn-secondary">RESET</button>
+          </div>
+          <p id="status" class="status" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Henry Security SAS - Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="caja.js"></script>
+</body>
+</html>

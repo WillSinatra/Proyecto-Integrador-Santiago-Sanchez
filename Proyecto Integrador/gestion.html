@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gestión de Usuarios — Henry</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="gestion-estilos.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand">HENRY</div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html" class="nav-item">Home</a></li>
+          <li><a href="generar.html" class="nav-item">Generar contraseña</a></li>
+          <li><a href="caja.html" class="nav-item">Caja Fuerte</a></li>
+          <li><a href="monitoreo.html" class="nav-item">Monitoreo de actividad</a></li>
+          <li><a href="gestion.html" class="nav-item nav-active">Gestión de usuarios</a></li>
+        </ul>
+      </nav>
+      <div class="header-spacer"></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="gestion-hero">
+      <h1 class="hero-title">Asistente De Seguridad</h1>
+      <div class="pill-yellow">GESTIÓN DE PERFILES</div>
+    </section>
+
+    <section class="gestion-section">
+      <div class="card">
+        <h2 class="card-title">Gestión de Usuarios</h2>
+
+        <div class="form-row">
+          <div class="form-left">
+            <label for="viewSelect">Ver Perfiles</label>
+            <select id="viewSelect">
+              <option value="">-- Seleccione --</option>
+              <option value="todos">Todos</option>
+              <option value="antiguedad">Por Antigüedad</option>
+              <option value="admins">Solo Administradores</option>
+            </select>
+          </div>
+          <div class="form-right">
+            <button id="btnVer" class="btn btn-primary">VER</button>
+          </div>
+        </div>
+
+        <div class="actions-row">
+          <div class="form-left">
+            <label for="">Ver Perfiles Por Antigüedad</label>
+          </div>
+          <div class="form-right">
+            <button id="btnAntiguedad" class="btn btn-primary">VER</button>
+          </div>
+        </div>
+
+        <div class="actions-row">
+          <div class="form-left">
+            <label for="">Ver Administradores</label>
+          </div>
+          <div class="form-right">
+            <button id="btnAdmins" class="btn btn-primary">VER</button>
+          </div>
+        </div>
+
+        <div class="actions-row">
+          <div class="form-left">
+            <label for="nuevoCodigoAcceso">Nuevo código de acceso</label>
+            <input id="nuevoCodigoAcceso" type="text" placeholder="4 números" maxlength="4" inputmode="numeric" />
+          </div>
+          <div class="form-right">
+            <button id="btnActualizar" class="btn btn-primary">ACTUALIZAR</button>
+          </div>
+        </div>
+
+        <div class="actions-row">
+          <div class="form-left">
+            <label for="usuarioAcceso">Usuario</label>
+            <input id="usuarioAcceso" type="text" placeholder="Nombre de usuario" />
+          </div>
+          <div class="form-right">
+          </div>
+        </div>
+
+        <div class="messages" id="messages" aria-live="polite"></div>
+
+        <div class="result-area">
+          <h3>Resultado</h3>
+          <pre id="resultado" class="resultado-box"></pre>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Henry Security SAS - Todos los derechos reservados</p>
+  </footer>
+
+  <script src="gestion.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Asistente De Seguridad — Generador</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Page styles -->
+  <link rel="stylesheet" href="generar-estilos.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand">HENRY</div>
+
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html" class="nav-item">Home</a></li>
+          <li><a href="generar.html" class="nav-item nav-active">Generar contraseña</a></li>
+          <li><a href="caja.html" class="nav-item">Caja Fuerte</a></li>
+          <li><a href="monitoreo.html" class="nav-item">Monitoreo de actividad</a></li>
+          <li><a href="gestion.html" class="nav-item">Gestión de usuarios</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-spacer"></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1 class="hero-title">Asistente De Seguridad</h1>
+      <div class="pill-yellow">Generador de contraseñas para usuarios:</div>
+    </section>
+
+    <section class="generator-section">
+      <div class="card">
+        <h2 class="card-title">Cantidad de caracteres deseados</h2>
+
+        <form id="generator-form">
+          <div class="form-row">
+            <label for="length" class="row-label">Cantidad de caracteres deseados</label>
+            <input id="length" type="number" min="3" max="10" value="12" class="input-number">
+          </div>
+
+          <div class="form-row">
+            <label for="special" class="row-label">¿Incluir caracteres especiales?</label>
+            <input id="special" type="checkbox" class="input-checkbox">
+          </div>
+
+          <div class="form-row">
+            <label for="numbers" class="row-label">¿Incluir caracteres numéricos?</label>
+            <input id="numbers" type="checkbox" class="input-checkbox" checked>
+          </div>
+
+          <div class="form-row">
+            <label for="uppercase" class="row-label">¿Incluir caracteres mayúsculas?</label>
+            <input id="uppercase" type="checkbox" class="input-checkbox" checked>
+          </div>
+
+          <div class="form-actions">
+            <button type="button" id="generateBtn" class="btn btn-primary">Generar contraseña</button>
+          </div>
+
+          <div class="result-row">
+            <label for="result" class="result-label">Contraseña generada</label>
+            <div class="result-wrapper">
+              <input id="result" type="text" class="result-input" readonly>
+              <button type="button" id="copyBtn" class="btn btn-copy">Copiar</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Henry Security SAS - Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="generar.js"></script>
+</body>
+</html>

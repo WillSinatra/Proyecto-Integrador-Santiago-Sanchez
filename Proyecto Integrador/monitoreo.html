@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Monitoreo de Actividades — Henry</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="monitoreo-estilos.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand">HENRY</div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html" class="nav-item">Home</a></li>
+          <li><a href="generar.html" class="nav-item">Generar contraseña</a></li>
+          <li><a href="caja.html" class="nav-item">Caja Fuerte</a></li>
+          <li><a href="monitoreo.html" class="nav-item nav-active">Monitoreo de actividad</a></li>
+          <li><a href="gestion.html" class="nav-item">Gestión de usuarios</a></li>
+        </ul>
+      </nav>
+      <div class="header-spacer"></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="monitor-hero">
+      <h1 class="hero-title">Asistente De Seguridad</h1>
+      <div class="pill-yellow">SISTEMA DE MONITOREO DE ACTIVIDAD SOSPECHOSA</div>
+    </section>
+
+    <section class="monitor-section">
+      <div class="card">
+        <h2 class="card-title">Monitoreo de Actividades Sospechosas</h2>
+
+        <div class="form-row">
+          <div class="form-left">
+            <label for="descripcion">Descripción</label>
+            <input id="descripcion" type="text" placeholder="Describa la actividad..." />
+            <label for="nivel">Nivel de riesgo</label>
+            <select id="nivel">
+              <option value="">-- Seleccione --</option>
+              <option value="bajo">bajo</option>
+              <option value="medio">medio</option>
+              <option value="alto">alto</option>
+            </select>
+          </div>
+          <div class="form-right">
+            <button id="btnAgregar" class="btn btn-primary">AGREGAR ACTIVIDAD</button>
+          </div>
+        </div>
+
+        <div class="messages" id="messages" aria-live="polite"></div>
+
+        <div class="actions-row">
+          <div class="form-left">
+            <label for="eliminarIndex">Eliminar una actividad sospechosa</label>
+            <input id="eliminarIndex" type="number" min="0" placeholder="Índice" />
+          </div>
+          <div class="form-right">
+            <button id="btnEliminar" class="btn btn-secondary">ELIMINAR ACTIVIDAD</button>
+          </div>
+        </div>
+
+        <div class="actions-row">
+          <div class="form-left">
+            <label for="filtroNivel">Filtra actividades por nivel de riesgo</label>
+            <select id="filtroNivel">
+              <option value="">-- Seleccione --</option>
+              <option value="bajo">bajo</option>
+              <option value="medio">medio</option>
+              <option value="alto">alto</option>
+            </select>
+          </div>
+          <div class="form-right">
+            <button id="btnMostrar" class="btn btn-primary">MOSTRAR ACTIVIDADES</button>
+          </div>
+        </div>
+
+        <div class="actions-row">
+          <div class="form-left">
+            <label for="reporteDummy">Reporte de actividades</label>
+            <input id="reporteDummy" type="text" aria-disabled="true" disabled placeholder="">
+          </div>
+          <div class="form-right">
+            <button id="btnReporte" class="btn btn-secondary">GENERAR REPORTE</button>
+          </div>
+        </div>
+
+        <div class="list-area">
+          <h3>Actividades registradas</h3>
+          <ul id="listaActividades"></ul>
+        </div>
+
+        <div class="result-area">
+          <h3>Resultado</h3>
+          <pre id="resultado" class="resultado-box"></pre>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Henry Security SAS</p>
+  </footer>
+
+  <script src="monitoreo.js"></script>
+</body>
+</html>
